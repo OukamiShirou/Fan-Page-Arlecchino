@@ -1,0 +1,124 @@
+/* --- Hero Section --- */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, var(--black-pure) 0%, var(--black-soft) 50%, var(--blood-red-dark) 100%);
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+    pointer-events: none;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding: 2rem;
+    max-width: 1400px;
+    z-index: 1;
+}
+
+.hero-text {
+    text-align: left;
+    animation: fadeInLeft 1s ease;
+}
+
+.hero-subtitle {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: linear-gradient(90deg, var(--blood-red), transparent);
+    border-left: 3px solid var(--blood-red-light);
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    font-size: 5rem;
+    font-weight: 700;
+    background: linear-gradient(180deg, var(--gray-lightest) 0%, var(--gray-medium) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 40px rgba(139, 0, 0, 0.3);
+    margin-bottom: 0.5rem;
+}
+
+.hero-tagline {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    font-style: italic;
+    color: var(--blood-red-light);
+    margin-bottom: 2rem;
+}
+
+.hero-element {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.element-badge {
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    background: var(--black-card);
+    border: 1px solid var(--gray-dark);
+    transition: var(--transition-fast);
+}
+
+.element-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-soft);
+}
+
+.element-badge.fire {
+    border-color: var(--blood-red);
+    color: #FF6B35;
+}
+
+.hero-image {
+    animation: fadeInRight 1s ease;
+}
+
+.character-image {
+    max-width: 450px;
+    max-height: 600px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 50px rgba(139, 0, 0, 0.4));
+    animation: float 4s ease-in-out infinite;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--gray-medium);
+    font-size: 0.8rem;
+    animation: bounce 2s infinite;
+}
+
+.scroll-arrow {
+    width: 20px;
+    height: 20px;
+    border-right: 2px solid var(--blood-red);
+    border-bottom: 2px solid var(--blood-red);
+    transform: rotate(45deg);
+}

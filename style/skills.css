@@ -1,0 +1,148 @@
+/* --- Skills Section --- */
+.skills-section {
+    background: linear-gradient(180deg, var(--black-card) 0%, var(--black-soft) 100%);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.skill-card {
+    background: var(--black-card);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid var(--gray-dark);
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-medium);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.skill-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--blood-red), var(--blood-red-light));
+    transform: scaleX(0);
+    transition: var(--transition-medium);
+}
+
+.skill-card:hover {
+    border-color: var(--blood-red);
+    transform: translateY(-8px);
+}
+
+.skill-card:hover::before {
+    transform: scaleX(1);
+}
+
+.skill-card.featured {
+    border-color: var(--blood-red);
+    background: linear-gradient(145deg, var(--black-card) 0%, rgba(139, 0, 0, 0.2) 100%);
+}
+
+.skill-card.ultimate {
+    border-color: var(--blood-red-light);
+}
+
+.skill-card.ultimate::before {
+    transform: scaleX(1);
+    background: linear-gradient(90deg, var(--blood-red-dark), var(--blood-red), var(--blood-red-dark));
+}
+
+.skill-header {
+    margin-bottom: 1rem;
+}
+
+.skill-type {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background: var(--blood-red-dark);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.skill-card h3 {
+    font-size: 1.3rem;
+    color: var(--gray-lightest);
+}
+
+.skill-card p {
+    color: var(--gray-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.skill-stats {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.skill-stats span {
+    padding: 0.4rem 0.8rem;
+    background: var(--black-soft);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: var(--gray-medium);
+    border: 1px solid var(--gray-dark);
+}
+
+/* Passive Skills */
+.passive-skills {
+    background: var(--black-soft);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid var(--gray-dark);
+}
+
+.passive-title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--gray-lightest);
+}
+
+.passive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.passive-card {
+    padding: 1.5rem;
+    background: var(--black-card);
+    border-radius: 12px;
+    border-left: 3px solid var(--blood-red);
+    transition: var(--transition-fast);
+}
+
+.passive-card:hover {
+    background: rgba(139, 0, 0, 0.1);
+}
+
+.passive-card h4 {
+    font-size: 1.1rem;
+    color: var(--blood-red-light);
+    margin-bottom: 0.5rem;
+}
+
+.passive-card p {
+    font-size: 0.95rem;
+    color: var(--gray-light);
+}

@@ -1,0 +1,67 @@
+/* --- Story Section --- */
+.story-section {
+    background: var(--black-soft);
+}
+
+.story-timeline {
+    position: relative;
+    padding-left: 40px;
+}
+
+.story-timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--blood-red), var(--gray-dark));
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: var(--transition-medium);
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -32px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    background: var(--blood-red);
+    border-radius: 50%;
+    border: 3px solid var(--black-soft);
+    box-shadow: 0 0 15px var(--blood-red-glow);
+}
+
+.timeline-content {
+    background: var(--black-card);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--gray-dark);
+    transition: var(--transition-fast);
+}
+
+.timeline-content:hover {
+    border-color: var(--blood-red);
+}
+
+.timeline-content h3 {
+    font-size: 1.3rem;
+    color: var(--blood-red-light);
+    margin-bottom: 1rem;
+}
+
+.timeline-content p {
+    color: var(--gray-light);
+    line-height: 1.7;
+}

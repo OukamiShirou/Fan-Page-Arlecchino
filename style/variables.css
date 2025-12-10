@@ -1,0 +1,28 @@
+:root {
+    /* Palette principale */
+    --blood-red: #8B0000;
+    --blood-red-light: #A52A2A;
+    --blood-red-dark: #5C0000;
+    --blood-red-glow: rgba(139, 0, 0, 0.6);
+
+    /* Gris */
+    --gray-lightest: #F5F5F5;
+    --gray-light: #E0E0E0;
+    --gray-medium: #9E9E9E;
+    --gray-dark: #424242;
+
+    /* Noir */
+    --black-pure: #000000;
+    --black-soft: #1A1A1A;
+    --black-card: #252525;
+
+    /* Effets */
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --shadow-strong: 0 8px 40px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 30px var(--blood-red-glow);
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.4s ease;
+    --transition-slow: 0.6s ease;
+}
