@@ -1,1 +1,2 @@
-Website link: https://oukamishirou.github.io/Fan-Page-Arlecchino/
+Website created by OukamiSHirou
+Intended for a school project
